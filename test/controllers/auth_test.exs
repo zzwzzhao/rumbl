@@ -65,7 +65,7 @@ defmodule Rumbl.AuthTest do
 
   test "login with a not found user", %{conn: conn} do
     assert {:error, :not_found, _conn} =
-      Auth.login_by_username_and_pass(conn, "me", "secret", repo: repo)
+      Auth.login_by_username_and_pass(conn, "me", "secret", repo: Repo)
   end
 
   test "login with password mismatch", %{conn: conn} do
